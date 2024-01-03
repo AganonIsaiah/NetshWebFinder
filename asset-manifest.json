@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/NetshWebFinder/static/css/main.e6c13ad2.css",
+    "main.js": "/NetshWebFinder/static/js/main.8cf00ff7.js",
+    "static/js/787.40c21f0c.chunk.js": "/NetshWebFinder/static/js/787.40c21f0c.chunk.js",
+    "index.html": "/NetshWebFinder/index.html",
+    "main.e6c13ad2.css.map": "/NetshWebFinder/static/css/main.e6c13ad2.css.map",
+    "main.8cf00ff7.js.map": "/NetshWebFinder/static/js/main.8cf00ff7.js.map",
+    "787.40c21f0c.chunk.js.map": "/NetshWebFinder/static/js/787.40c21f0c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.8cf00ff7.js"
+  ]
+}
