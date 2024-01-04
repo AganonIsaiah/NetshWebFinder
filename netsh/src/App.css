@@ -1,38 +1,50 @@
-.App {
+body {
+  font-family: 'Arial', sans-serif; /* Fallback font */
+  margin: 0;
+  padding: 0;
+  background-color: #2b7a78; /* Background color for the entire page */
+}
+
+.app-container {
   text-align: center;
+  margin: 20px;
+  background-color: #DEF2F1; /* Background color for the content area */
+  padding: 20px;
+  border-radius: 8px; /* Add rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #333; /* Text color for the heading */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.wifi-item {
+  margin-bottom: 10px; /* Reduced margin between Wi-Fi items */
+  background-color: #FEFFFF; /* Background color for each Wi-Fi item */
+  padding: 10px; /* Reduced padding for each Wi-Fi item */
+  border-radius: 4px; /* Add rounded corners to each item */
 }
 
-.App-link {
-  color: #61dafb;
+.wifi-details {
+  margin-bottom: 10px; /* Adjust the margin between Name and Password sections */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+button {
+  margin-top: 10px; /* Adjust the margin between Password section and Forget Network button */
+  background-color: #4285f4; /* Google's blue color */
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+
+  &:hover {
+    background-color: #3b74ce; /* Darker shade on hover */
   }
 }

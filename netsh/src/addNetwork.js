@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './addNetwork.css'; 
 
 const AddNetwork = ({ onNetworkAdded }) => {
   const [ssid, setSsid] = useState('');
@@ -25,19 +26,31 @@ const AddNetwork = ({ onNetworkAdded }) => {
   };
 
   return (
-    <div>
-      <h2>Add New Network</h2>
-      <label>
+    <div className="add-network-container">
+      <h2 className="add-network-heading">Add New Network</h2>
+      <label className="input-label">
         SSID (Network Name):
-        <input type="text" value={ssid} onChange={(e) => setSsid(e.target.value)} />
+        <input
+          type="text"
+          value={ssid}
+          onChange={(e) => setSsid(e.target.value)}
+          className="input-field"
+        />
       </label>
       <br />
-      <label>
+      <label className="input-label">
         Password:
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="input-field"
+        />
       </label>
       <br />
-      <button onClick={handleAddNetwork}>Add Network</button>
+      <button onClick={handleAddNetwork} className="add-button">
+        Add Network
+      </button>
     </div>
   );
 };

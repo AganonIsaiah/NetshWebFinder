@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
 import AddNetwork from './addNetwork';
+import './App.css'; // For styling
 
 const App = () => {
   const [wifiInfo, setWifiInfo] = useState([]);
@@ -54,17 +54,27 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="app-container">
       <h1>Wi-Fi Information</h1>
 
-      <ul>
+      <ul className="wifi-list">
         {wifiInfo.map((wifi, index) => (
-          <li key={index}>
-            <strong>Name:</strong> {wifi.name}, <strong>Password:</strong> {wifi.password}
-            <button onClick={() => handleForgetNetwork(wifi.name)}>Forget Network</button>
+          <li key={index} className="wifi-item">
+            <div className="wifi-details">
+              <div>
+                <strong>Name:</strong> {wifi.name}
+              </div>
+              <div>
+                <strong>Password:</strong> {wifi.password}
+              </div>
+              <div>
+                <button onClick={() => handleForgetNetwork(wifi.name)}>Forget Network</button>
+              </div>
+            </div>
           </li>
         ))}
       </ul>
+
       <AddNetwork onNetworkAdded={handleNetworkAdded} />
     </div>
   );

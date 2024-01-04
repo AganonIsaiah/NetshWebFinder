@@ -115,15 +115,11 @@ app.post('/api/addNetwork', async (req, res) => {
 
     // Save the XML to a file 
     const filePath = `${__dirname}/profiles/profile.xml`;
-
     require('fs').writeFileSync(filePath, profileXml);
-
     // Run the netsh command to add the profile
     execSync(`netsh wlan add profile filename="${filePath}" interface="Wi-Fi"`);
-
     // Log success
     console.log(`Wi-Fi network "${ssid}" added successfully.`);
-
     // Respond with success message
     res.json({ success: true, message: `Wi-Fi network "${ssid}" added successfully.` });
   } catch (error) {

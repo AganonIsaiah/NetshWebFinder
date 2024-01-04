@@ -1,0 +1,40 @@
+.add-network-container {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #3aafa9; /* Background color for the add network form */
+    padding: 20px;
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  }
+  
+  .add-network-heading {
+    color: #17252A; /* Text color for the heading */
+  }
+  
+  .input-label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333; /* Text color for labels */
+  }
+  
+  .input-field {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .add-button {
+    background-color: #4285f4; /* Google's blue color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions on hover */
+  
+    &:hover {
+      background-color: #fff; /* Change to white background on hover */
+      color: #4285f4; /* Change text color to Google's blue on hover */
+    }
+  }
