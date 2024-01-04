@@ -1,5 +1,5 @@
 const express = require('express'); // Express.js framework for handling HTTP requests
-const { exec } = require('child_process'); // Child process module to execute shell commands
+const { exec, execSync } = require('child_process'); // Child process module to execute shell commands
 const util = require('util'); // Utility module for various functions
 const cors = require('cors'); // Import the cors module
 
@@ -77,6 +77,62 @@ app.post('/api/forgetNetworks', async (req, res) => {
   }
 });
 
+
+// New endpoint for adding a Wi-Fi network
+app.post('/api/addNetwork', async (req, res) => {
+  const { ssid, password } = req.body;
+
+  try {
+    console.log('Received request to add Wi-Fi network:', ssid, password);
+
+    // Create an XML file with the network profile
+    const profileXml = `
+      <WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
+        <name>${ssid}</name>
+        <SSIDConfig>
+          <SSID>
+            <name>${ssid}</name>
+          </SSID>
+        </SSIDConfig>
+        <connectionType>ESS</connectionType>
+        <connectionMode>manual</connectionMode>
+        <MSM>
+          <security>
+            <authEncryption>
+              <authentication>WPA2PSK</authentication>
+              <encryption>AES</encryption>
+              <useOneX>false</useOneX>
+            </authEncryption>
+            <sharedKey>
+              <keyType>passPhrase</keyType>
+              <protected>false</protected>
+              <keyMaterial>${password}</keyMaterial>
+            </sharedKey>
+          </security>
+        </MSM>
+      </WLANProfile>
+    `;
+
+    // Save the XML to a file 
+    const filePath = `${__dirname}/profiles/profile.xml`;
+
+    require('fs').writeFileSync(filePath, profileXml);
+
+    // Run the netsh command to add the profile
+    execSync(`netsh wlan add profile filename="${filePath}" interface="Wi-Fi"`);
+
+    // Log success
+    console.log(`Wi-Fi network "${ssid}" added successfully.`);
+
+    // Respond with success message
+    res.json({ success: true, message: `Wi-Fi network "${ssid}" added successfully.` });
+  } catch (error) {
+    // Handle errors
+    console.error(`Error adding new Wi-Fi network "${ssid}": ${error.message}`);
+    // Respond with an error message
+    res.status(500).json({ success: false, message: `Error adding Wi-Fi network "${ssid}"` });
+  }
+});
 
 // Start the server and listen for incoming requests on the specified port
 app.listen(port, () => {

@@ -1,6 +1,5 @@
 {
-  "homepage": "https://AganonIsaiah.github.io/NetshWebFinder",
-  "name": "netsh",
+    "name": "netsh",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

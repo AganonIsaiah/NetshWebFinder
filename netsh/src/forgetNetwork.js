@@ -11,7 +11,6 @@ if (!networkNameToDelete) {
 try {
   console.log('Deleting Wi-Fi network:', networkNameToDelete);
 
-  // Use absolute paths for netsh and the script
   const netshPath = path.join(process.env.SystemRoot, 'System32', 'netsh.exe');
   const scriptPath = path.join(__dirname, 'forgetNetworks.js');
 
