@@ -1,9 +1,9 @@
 
       <WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
-        <name>Testing2222</name>
+        <name>Testing1238383</name>
         <SSIDConfig>
           <SSID>
-            <name>Testing2222</name>
+            <name>Testing1238383</name>
           </SSID>
         </SSIDConfig>
         <connectionType>ESS</connectionType>
@@ -18,7 +18,7 @@
             <sharedKey>
               <keyType>passPhrase</keyType>
               <protected>false</protected>
-              <keyMaterial>12343432</keyMaterial>
+              <keyMaterial>3214213421412431</keyMaterial>
             </sharedKey>
           </security>
         </MSM>
