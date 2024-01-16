@@ -31,3 +31,4 @@ Email: IsaiahAganon@cmail.carleton.ca
 2. Navigate to project directory: cd netsh
 3. Install dependencies: npm install
 4. Start server: npm start
+5. Open: http://localhost:3000/NetshWebFinder
