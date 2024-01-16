@@ -5,6 +5,7 @@ NetshWebFinder is a simple web project developed using Node.js and React. It uti
 ## Author
 
 Isaiah Aganon
+
 Email: IsaiahAganon@cmail.carleton.ca
 
 ## Features
