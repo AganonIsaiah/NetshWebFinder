@@ -42,9 +42,10 @@ button {
   padding: 8px 12px;
   cursor: pointer;
   border-radius: 4px;
-  transition: background-color 0.3s ease; /* Smooth transition on hover */
-
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions on hover */
+  
   &:hover {
-    background-color: #3b74ce; /* Darker shade on hover */
+    background-color: #fff; /* Change to white background on hover */
+    color: #4285f4; /* Change text color to Google's blue on hover */
   }
 }

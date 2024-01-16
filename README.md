@@ -24,12 +24,9 @@ Email: IsaiahAganon@cmail.carleton.ca
 5. **Limitations:**
    - Program is unable to fetch the wifi name and passcode of heavily secured networks (such as University network information).
 
-## How to Run
+### Installation
 
-To run this project locally, follow these steps:
-
-1. Open your terminal
-
-2. Change directory to the project folder 'netsh'
-
-3. Enter 'npm start'
+1. Clone the repository: git clone https://github.com/AganonIsaiah/NetshWebFinder.git
+2. Navigate to project directory: cd netsh
+3. Install dependencies: npm install
+4. Start server: npm start
